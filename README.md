@@ -1,2 +1,7 @@
 # Projetos
-Projetos pessoais/Projetos de pesquisa IFRN do Curso de TSI
+Pasta com projetos pessoais 
+##
+
+- Feitos com
+  - HTML 5
+  - CSS 

@@ -3,7 +3,7 @@ Pasta com projetos pessoais
 ##
 
 - Feitos com
-  - HTML 5
+  - HTML 
   - CSS
   - JavaScript
 

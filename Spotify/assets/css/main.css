@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background-color:black;
+    color:white;
+}
+
+.conteiner{
+    display: flex;
+    height: 100vh;
+}
+
+.menu-lateral{
+    width: 300px;
+    background-color: #121212;
+    padding: 10px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main{
+    padding: 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+
+.nav-biblioteca{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo i{
+    font-size: 24px;
+}
+
+.nav-biblioteca i, .nav-biblioteca p {
+    color: #b7b3b6;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-playlist, .nav-podcast{
+    background-color: #242424;
+    padding: 16px;
+    border-radius: 15px;
+}
+
+.nav-playlist button, .nav-podcast button{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+
+.nav-playlist p, .nav-podcast p{
+    font-size: 12px;
+
+}
+
+.nav-rodape{
+    margin-top: auto;
+}
+
+.nav-rodape a{
+    color: #a7a7a7;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+.Linguagem{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px ;
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+.pesquisar{
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+
+.pesquisar input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    margin-left: 5px;
+    outline: none;
+}
+
+
+.artistas-grid, .albuns-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.artista-card, .album-card{
+    background-color: #181818;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.artista-card, .album-card:hover{
+    background-color: #282828;
+
+}
+
+
+.artista-card img, .album-card img {
+    width: 100%;
+
+    border-radius: 50%;
+    margin-bottom: 12px;
+
+}
+
+
+.artista-card h3, .album-card h3 {
+    font-size: 12px;
+    color: #b7b3b6;
+
+
+}
+
+
+
+artista-card p, .album-card p{
+    font-size: 10px;
+} 
+
+
+.conteudo {
+    margin-top: 40px;
+}
+
+.conteudo h2{
+    margin-bottom: 20px;
+}

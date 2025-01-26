@@ -24,10 +24,10 @@ body {
     text-decoration: none;
     border: none;
     outline: none;
-    background-image: url(../imgs/reiu.gif); /* Caminho ajustado */
-    background-size: cover; /* Faz a imagem preencher todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-image: url(../imgs/reiu.gif);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
 
 }
 
@@ -39,12 +39,12 @@ header {
     position: fixed; /* Fixa o cabeçalho no topo da página */
     top: 0; /* Garante que esteja no topo */
     left: 0; /* Alinha à esquerda */
-    width: 100%; /* Faz o cabeçalho ocupar toda a largura */
-    display: flex; /* Exibe os itens do cabeçalho em linha */
-    justify-content: space-between; /* Espaça os elementos no cabeçalho */
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    z-index: 1000; /* Certifica que o cabeçalho esteja acima de outros elementos */
-    background: transparent; /* Define o fundo transparente */
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 1000; 
+    background: transparent; 
 }
 
 /* estilização da logo */
@@ -65,26 +65,26 @@ header {
 
 /* Estilização do menu */
 nav {
-    display: flex; /* Organiza os itens do menu na horizontal */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    justify-content: center; /* Centraliza o menu horizontalmente */
-    width: 100%; /* Garante que o menu ocupe toda a largura */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
 }
 
 /* Links do menu */
 nav a {
-    display: inline-block; /* Garante que os links fiquem alinhados na horizontal */
+    display: inline-block; 
     font-size: 1.8em;
     color: rgb(97, 92, 92);
-    margin: 0 2rem; /* Adiciona um espaçamento horizontal entre os links */
+    margin: 0 2rem; 
     font-weight: 500;
     transition: 0.2s ease;
     border-bottom: 4px solid transparent;
 }
 
-/* Garanta que os itens do menu não fiquem grudados */
+
 nav a:not(:last-child) {
-    margin-right: 2rem; /* Adiciona espaço à direita dos links, exceto o último */
+    margin-right: 2rem; 
 }
 
 
@@ -201,28 +201,28 @@ span {
 
 /* Hover com cores específicas para os ícones */
 .social-icones a:hover i.fab.fa-github {
-    background-color: #171515; /* Cor oficial do GitHub */
+    background-color: #171515; 
     box-shadow: 0 0 25px #ffffff;
     color: white;
     border-radius: 50%;
 }
 
 .social-icones a:hover i.fab.fa-instagram {
-    background-color: #e1306c; /* Cor oficial do Instagram */
+    background-color: #e1306c; 
     box-shadow: 0 0 25px #e1306c;
     color: white;
     border-radius: 50%;
 }
 
 .social-icones a:hover i.fab.fa-linkedin {
-    background-color: #0077b5; /* Cor oficial do LinkedIn */
+    background-color: #0077b5; 
     box-shadow: 0 0 25px #0077b5;
     color: white;
     border-radius: 50%;
 }
 
 .social-icones a:hover i.fas.fa-envelope {
-    background-color: #d44638; /* Vermelho clássico para e-mail */
+    background-color: #d44638; 
     box-shadow: 0 0 25px #d44638;
     color: white;
     border-radius: 50%;

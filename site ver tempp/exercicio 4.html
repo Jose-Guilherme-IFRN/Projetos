@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Espaços Adicionais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Remover Espaços Adicionais</h1>
+    <label for="inputText">Digite um texto:</label>
+    <textarea id="inputText" rows="5" cols="40" placeholder="Digite aqui"></textarea>
+    <br><br>
+    <button onclick="removerEspacosAdicionais()">Remover Espaços</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function removerEspacosAdicionais() {
+            
+            const texto = document.getElementById("inputText").value;
+
+            
+            if (!texto.trim()) {
+                alert("Por favor, insira um texto.");
+                return;
+            }
+
+            
+            const textoLimpo = texto.replace(/\s+/g, ' ').trim();
+
+            
+            document.getElementById("result").innerHTML = `
+                <p><strong>Texto sem espaços adicionais:</strong> "${textoLimpo}"</p>
+            `;
+        }
+    </script>
+</body>
+</html>

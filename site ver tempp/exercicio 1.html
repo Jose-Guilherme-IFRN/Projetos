@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa de Análise de String</h1>
+    <label for="inputText">Digite uma string:</label>
+    <input type="text" id="inputText" placeholder="Digite aqui">
+    <button onclick="programaString()">Analisar</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function programaString() {
+            
+            const texto = document.getElementById("inputText").value;
+            if (!texto) {
+                alert("Por favor, insira um texto!");
+                return;
+            }
+
+            let resultHTML = "";
+
+        
+            resultHTML += `<p><strong>Número de caracteres:</strong> ${texto.length}</p>`;
+
+
+            resultHTML += `<p><strong>String em maiúsculo:</strong> ${texto.toUpperCase()}</p>`;
+
+            
+            const vogais = "aeiouAEIOU";
+            let countVogais = 0;
+            for (let char of texto) {
+                if (vogais.includes(char)) {
+                    countVogais++;
+                }
+            }
+            resultHTML += `<p><strong>Número de vogais:</strong> ${countVogais}</p>`;
+
+            
+            if (texto.toLowerCase().startsWith("uni")) {
+                resultHTML += `<p><strong>A string começa com 'UNI'</strong></p>`;
+            } else {
+                resultHTML += `<p><strong>A string não começa com 'UNI'</strong></p>`;
+            }
+
+            
+            if (texto.toLowerCase().endsWith("rio")) {
+                resultHTML += `<p><strong>A string termina com 'RIO'</strong></p>`;
+            } else {
+                resultHTML += `<p><strong>A string não termina com 'RIO'</strong></p>`;
+            }
+
+    
+            let countDigitos = 0;
+            for (let char of texto) {
+                if (/\d/.test(char)) {
+                    countDigitos++;
+                }
+            }
+            resultHTML += `<p><strong>Número de dígitos:</strong> ${countDigitos}</p>`;
+
+            
+            const textoLimpo = texto.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            const reverso = textoLimpo.split('').reverse().join('');
+            if (textoLimpo === reverso) {
+                resultHTML += `<p><strong>A string é um palíndromo</strong></p>`;
+            } else {
+                resultHTML += `<p><strong>A string não é um palíndromo</strong></p>`;
+            }
+
+            
+            document.getElementById("result").innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>

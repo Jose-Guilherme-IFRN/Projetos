@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Caracteres e Palavras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contar Caracteres e Palavras</h1>
+    <label for="inputText">Digite um texto:</label>
+    <textarea id="inputText" rows="5" cols="40" placeholder="Digite aqui"></textarea>
+    <br><br>
+    <button onclick="contarCaracteresEPalavras()">Contar</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function contarCaracteresEPalavras() {
+            
+            const texto = document.getElementById("inputText").value;
+
+            
+            if (!texto.trim()) {
+                alert("Por favor, insira um texto.");
+                return;
+            }
+
+            
+            const numCaracteres = texto.length;
+
+            // Contando o número de palavras
+            const palavras = texto.trim().split(/\s+/);
+            const numPalavras = palavras.length;
+
+            
+            const resultHTML = `
+                <p><strong>Número total de caracteres:</strong> ${numCaracteres}</p>
+                <p><strong>Número total de palavras:</strong> ${numPalavras}</p>
+            `;
+            document.getElementById("result").innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dígitos por Extenso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Converter Dígitos para Extenso</h1>
+    <label for="inputNumber">Digite um número inteiro:</label>
+    <input type="text" id="inputNumber" placeholder="Digite aqui">
+    <button onclick="numeroPorExtenso()">Converter</button>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function numeroPorExtenso() {
+            
+            const numero = document.getElementById("inputNumber").value;
+
+            
+            if (!numero || isNaN(numero)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            const numerosPorExtenso = [
+                "zero", "um", "dois", "três", "quatro", "cinco", 
+                "seis", "sete", "oito", "nove"
+            ];
+
+            
+            const numeroEmExtenso = numero.split('')
+                .map(digito => numerosPorExtenso[parseInt(digito)])
+                .join(', ');
+
+            
+            document.getElementById("result").innerHTML = `<p><strong>Os dígitos por extenso são:</strong> ${numeroEmExtenso}</p>`;
+        }
+    </script>
+</body>
+</html>

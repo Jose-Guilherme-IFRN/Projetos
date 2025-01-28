@@ -25,8 +25,7 @@ Tela de login feita com
 
 
 
-Clone da Pagina web do Spotify
-feito com 
+Clone da Pagina web do Spotify feito com 
   - HTML
   - CSS
   - JAVASCRIPT
@@ -50,9 +49,9 @@ Um website próprio de portfolio com pequena responsividade na tela
 
 ###### Quinto Projeto
 Um site de consultar tempo
--HTML
--CSS 
--JAVASCRIPT
+  - HTML
+  - CSS 
+  - JAVASCRIPT
 ![tempo](https://github.com/user-attachments/assets/f5381bc5-16c7-405b-aa87-7e4c071f488c)
 
 
